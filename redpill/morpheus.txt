@@ -1,0 +1,12 @@
+Unary operators :
+1.& = allows generation of pointers.
+2.* = allows dereferencing of pointers.
+note expr and (*&expr) are equivalent (see ptr_ari.c)
+It is common to pass pointers to structures from one place to another rather than copying them.
+The expression (*rp).width dereferences the pointer and selects the width field of the resulting structure.
+Parentheses are required, because the compiler would interpret the expression *rp.width as *(rp.width),
+which is not valid. This combination of dereferencing and field selection is so common that C provides an alternative
+notation using ->. That is, rp->width is equivalent to the expression (*rp).width. 
+malloc retruns generic pointer (void *) we have to typecast it.
+
+

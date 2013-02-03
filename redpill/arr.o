@@ -1,0 +1,35 @@
+
+arr_expr.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <expr>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	83 ec 30             	sub    $0x30,%esp
+   6:	c7 45 f8 00 00 00 00 	movl   $0x0,-0x8(%ebp)
+   d:	c7 45 d0 0c 00 00 00 	movl   $0xc,-0x30(%ebp)
+  14:	8b 45 fc             	mov    -0x4(%ebp),%eax
+  17:	c7 44 85 d0 0c 00 00 	movl   $0xc,-0x30(%ebp,%eax,4)
+  1e:	00 
+  1f:	8d 45 d0             	lea    -0x30(%ebp),%eax
+  22:	83 c0 08             	add    $0x8,%eax
+  25:	89 45 f8             	mov    %eax,-0x8(%ebp)
+  28:	8b 45 fc             	mov    -0x4(%ebp),%eax
+  2b:	83 e8 01             	sub    $0x1,%eax
+  2e:	8d 14 85 00 00 00 00 	lea    0x0(,%eax,4),%edx
+  35:	8d 45 d0             	lea    -0x30(%ebp),%eax
+  38:	01 d0                	add    %edx,%eax
+  3a:	89 45 f8             	mov    %eax,-0x8(%ebp)
+  3d:	8b 45 fc             	mov    -0x4(%ebp),%eax
+  40:	8d 14 c5 00 00 00 00 	lea    0x0(,%eax,8),%edx
+  47:	8d 45 d0             	lea    -0x30(%ebp),%eax
+  4a:	01 d0                	add    %edx,%eax
+  4c:	c7 00 0c 00 00 00    	movl   $0xc,(%eax)
+  52:	8b 45 fc             	mov    -0x4(%ebp),%eax
+  55:	c1 e0 02             	shl    $0x2,%eax
+  58:	c1 f8 02             	sar    $0x2,%eax
+  5b:	89 45 f8             	mov    %eax,-0x8(%ebp)
+  5e:	c9                   	leave  
+  5f:	c3                   	ret    
